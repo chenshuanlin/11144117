@@ -7,6 +7,12 @@
 
 body {
     background-color: #DBE3E6;
+    width: 100%;
+    background-image: url(image/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
 }
 
 header {
@@ -62,6 +68,10 @@ nav {
     /*border-style: solid;*/
 }
 
+p {
+    margin: 1px;
+}
+
 a {
     text-decoration: none;
 }
@@ -100,14 +110,9 @@ a {
     border-radius: 10px;
 }
 
-/*默認圖片*/
-#imageContainer photo {
-    transition: transform 0.3s ease-in-out;
-}
-
-/*懸停圖片*/
-#imageContainer photo:hover {
-    transform: scale(1.1);
+.icon {
+    justify-content: center;
+    margin: 50px;
 }
 
 .aboutmetext {
@@ -181,6 +186,353 @@ a {
 }
 
 
+
+/*專業能力*/
+
+.skills {
+    font-size: 24px;
+    text-align: center;
+    margin: 50px;
+}
+
+.charttext {
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 50px;
+}
+
+
+/*圓餅*/
+
+.skill {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 4%;
+    margin-bottom: 10%;
+}
+
+.circle-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 160px);
+    grid-gap: 80px;
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 150px;
+    height: 150px;
+    background: #d9d7da;
+    border-radius: 50%;
+
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill-1,
+.circle-wrap .circle .fill-2,
+.circle-wrap .circle .fill-3,
+.circle-wrap .circle .fill-4,
+.circle-wrap .circle .fill-5,
+.circle-wrap .circle .fill-6 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background: #ACACAC;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 13px;
+    margin-left: 13px;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* color animation */
+
+.mask .fill-1 {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3F5259;
+}
+
+.mask.full-1,
+.circle .fill-1 {
+    animation: fill-1 ease-in-out 5s;
+    transform: rotate(90deg);
+    animation-iteration-count: infinite;
+}
+
+@keyframes fill-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+
+.mask .fill-2 {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3F5259;
+}
+
+.mask.full-2,
+.circle .fill-2 {
+    animation: fill-2 ease-in-out 5s;
+    animation-iteration-count: infinite;
+    transform: rotate(117deg);
+}
+
+@keyframes fill-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(117deg);
+    }
+}
+
+.mask .fill-3 {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3F5259;
+}
+
+.mask.full-3,
+.circle .fill-3 {
+    animation: fill-3 ease-in-out 5s;
+    transform: rotate(153deg);
+    animation-iteration-count: infinite;
+}
+
+@keyframes fill-3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(153deg);
+    }
+}
+
+.mask .fill-4 {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3F5259;
+}
+
+.mask.full-4,
+.circle .fill-4 {
+    animation: fill-4 ease-in-out 5s;
+    transform: rotate(126deg);
+    animation-iteration-count: infinite;
+}
+
+@keyframes fill-4 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(126deg);
+    }
+}
+
+.mask .fill-5 {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3F5259;
+}
+
+.mask.full-5,
+.circle .fill-5 {
+    animation: fill-5 ease-in-out 5s;
+    transform: rotate(162deg);
+    animation-iteration-count: infinite;
+}
+
+@keyframes fill-5 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(162deg);
+    }
+}
+
+.mask .fill-6 {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3F5259;
+}
+
+.mask.full-6,
+.circle .fill-6 {
+    animation: fill-6 ease-in-out 5s;
+    transform: rotate(81deg);
+    animation-iteration-count: infinite;
+}
+
+@keyframes fill-6 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(81deg);
+    }
+}
+
+
+/*圓餅結束*/
+
+.zlgc18 {
+    margin: 30px 0px 20px 0px;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.timemargin {
+    margin-top: 50px;
+}
+
+/*社團時間軸*/
+
+.timelinetext {
+    margin: 0 0 10px;
+    font-size: 16pt;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timelineimg {
+    width: 400px;
+    margin-top: 5px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #FFF;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timelinecontainer {
+    padding: 10px 30px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timelinecontainer::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: -9px;
+    background-color: #335577;
+    border: 2px solid #FFF;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -9px;
+}
+
+.timelinecontent {
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .timeline::after {
+        left: 17px;
+    }
+
+    .timelinecontainer {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+
+    .timelinecontainer::before {
+        top: 20px;
+        left: 35px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left::after,
+    .right::after {
+        left: 8px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+
+/*專案*/
 .project {
     margin: 30px 0px 20px 0px;
     font-size: 24px;
@@ -188,6 +540,7 @@ a {
 }
 
 .myproject {
+    margin-top: 20px;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -199,7 +552,7 @@ a {
     padding: 30px 50px;
     align-items: center;
     width: 550px;
-    height: 450px;
+    height: 500px;
 
 }
 
@@ -209,11 +562,7 @@ a {
 }
 
 
-.zlgc18 {
-    margin: 30px 0px 20px 0px;
-    font-size: 24px;
-    text-align: center;
-}
+
 
 .zlgc {
     padding: 30px 10px;
@@ -223,26 +572,18 @@ a {
 
 /*輪播圖片*/
 #zlgcContainer {
-    width: 50%;
+    width: 70%;
     height: fit-content;
     border-radius: 5px;
     border: 2px #3F5259;
     overflow: hidden;
-    /* 隱藏超出容器的部分 */
 }
 
 #zlgcSlider {
     display: flex;
-    /* 使用彈性盒子布局 */
     transition: transform 0.5s ease-in-out;
-    /* 添加過渡效果 */
 }
 
 #zlgcSlider img {
     width: 100%;
-    /* 圖片寬度填充容器 */
-}
-
-.zlgctext {
-    width: 45%;
 }
