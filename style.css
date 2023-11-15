@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     color: #3F5259;
+    font-family: Agbalumo;
 }
 
 body {
@@ -44,12 +45,6 @@ header {
     font-size: 12px;
 }
 
-h5 {
-    color: white;
-    position: relative;
-    text-align: right;
-    padding: 5px;
-}
 
 nav {
     background-color: #ACACAC;
@@ -141,6 +136,7 @@ a {
     padding: 50px 75px;
     width: 500px;
     height: 330px;
+
 }
 
 .myhobby {
@@ -161,8 +157,6 @@ a {
     position: absolute;
     left: 50px;
     top: 30px;
-
-    border-style: solid;
 }
 
 .hobby2 {
@@ -172,8 +166,6 @@ a {
     position: absolute;
     left: 450px;
     top: 30px;
-
-    border-style: solid;
 }
 
 .hobby3 {
@@ -183,7 +175,6 @@ a {
     position: absolute;
     left: 900px;
 
-    border-style: solid;
 }
 
 .hobby2img,
@@ -288,12 +279,13 @@ a {
 }
 
 
+
 /*專業能力*/
 
 .skills {
     font-size: 24px;
     text-align: center;
-    margin-top: 50%;
+    margin-top: 40%;
 }
 
 .charttext {
@@ -654,7 +646,7 @@ a {
     padding: 30px 50px;
     align-items: center;
     width: 450px;
-    height: 400px;
+    height: 450px;
 }
 
 
