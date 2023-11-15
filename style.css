@@ -63,9 +63,6 @@ nav {
     border-radius: 10px;
     box-shadow: 5px 5px 10px #ACACAC,
         -1px -1px 5px #ACACAC;
-    ;
-
-    /*border-style: solid;*/
 }
 
 p {
@@ -98,28 +95,52 @@ a {
 }
 
 .aboutmearea {
-    padding: 40px 50px;
-
-    display: flex;
-    justify-content: space-evenly;
+    margin: 5% 0%;
+    padding: 40px 80px;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
 }
 
 .aboutmeimage {
-    width: 300px;
+    width: 245px;
     border-radius: 10px;
 }
 
+.pics {
+    position: relative;
+}
+
+.pics img {
+    position: absolute;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+}
+
+.pics img:last-child:hover {
+    opacity: 0;
+}
+
 .icon {
-    justify-content: center;
-    margin: 50px;
+    justify-content: space-around;
+    width: 10%;
+}
+
+.iconinit {
+    margin: 10px;
 }
 
 .aboutmetext {
     background-color: white;
     border-radius: 10px;
+    margin-left: 20%;
     padding: 50px 75px;
     width: 500px;
+    height: 330px;
 }
 
 .myhobby {
@@ -131,60 +152,140 @@ a {
 .hobbies {
     position: relative;
     display: flex;
-    flex-direction: column;
 }
 
 .hobby1 {
-    background-color: white;
-    margin: 20px 0px 10px 60px;
     padding: 20px;
-    height: 350px;
-    width: 40%;
-    border-radius: 20px;
-    position: relative;
-    top: 20px;
-}
 
-.hobby1img {
-    padding: 10px;
-    height: 180px;
-    float: left;
+    border-radius: 20px;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+
+    border-style: solid;
 }
 
 .hobby2 {
-    background-color: white;
-    margin: 10px 10px 30px 680px;
     padding: 20px;
-    height: 350px;
+
     border-radius: 20px;
     position: absolute;
-    top: 200px;
-    width: 40%;
-    float: right;
-}
+    left: 450px;
+    top: 30px;
 
-.hobby2img {
-    padding: 10px;
-    height: 180px;
-    float: right;
+    border-style: solid;
 }
 
 .hobby3 {
-    background-color: white;
-    margin: 200px 0px 50px 120px;
     padding: 20px;
-    height: 350px;
-    width: 40%;
+
     border-radius: 20px;
-    position: relative;
+    position: absolute;
+    left: 900px;
+
+    border-style: solid;
 }
 
+.hobby2img,
+.hobby1img,
 .hobby3img {
     padding: 10px;
-    height: 180px;
-    float: left;
+    width: 10px;
+    height: 15px;
+    position: absolute;
 }
 
+#hobby1container {
+    width: 300px;
+    height: 200px;
+    perspective: 800px;
+    margin: 50px auto;
+}
+
+#hobby2container {
+    width: 300px;
+    height: 200px;
+    perspective: 800px;
+    margin: 50px auto;
+}
+
+#hobby3container {
+    width: 200px;
+    height: 300px;
+    perspective: 800px;
+    margin: 50px auto;
+}
+
+#hobby1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotatehobby2 10s linear infinite;
+}
+
+#hobby2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotatehobby2 10s linear infinite;
+}
+
+#hobby3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotatehobby2 10s linear infinite;
+}
+
+.hobby2-item,
+.hobby1-item,
+.hobby3-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50% -200px;
+    transition: transform 1s ease-in-out;
+}
+
+.hobby2-item img,
+.hobby1-item img,
+.hobby3-item img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotatehobby1 {
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotatehobby2 {
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotatehobby3 {
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
 
 
 /*專業能力*/
@@ -192,13 +293,14 @@ a {
 .skills {
     font-size: 24px;
     text-align: center;
-    margin: 50px;
+    margin-top: 50%;
 }
 
 .charttext {
     margin-top: 20px;
     text-align: center;
     padding-left: 50px;
+
 }
 
 
@@ -551,14 +653,16 @@ a {
     border-radius: 10px;
     padding: 30px 50px;
     align-items: center;
-    width: 550px;
-    height: 500px;
-
+    width: 450px;
+    height: 400px;
 }
 
+
+
+
 .yt {
-    width: 450px;
-    height: 280px
+    width: 350px;
+    height: 180px
 }
 
 
@@ -586,4 +690,12 @@ a {
 
 #zlgcSlider img {
     width: 100%;
+}
+
+
+footer {
+    margin: 20px;
+    padding: auto;
+    text-align: center;
+
 }
